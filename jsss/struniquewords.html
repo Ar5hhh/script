@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let str1="all is well"
+        // let str2="all are well"
+
+        let str1= prompt("ENTER")
+        let str2= prompt("ENTER")
+
+        let bothStr=str1 + " " + str2 + " "
+
+    
+        let uniWord=""
+        let uniWord1=""
+
+        let count
+    
+        for( let i = 0 ; i < bothStr.length ; i ++ )
+        {
+           
+            if(bothStr[i] != " ")
+            {
+                uniWord+=bothStr[i]
+            }
+            else{
+                count=0
+                for( let j = 0 ; j < bothStr.length ; j ++ )
+                { 
+                    if(bothStr[j] != " ")
+                    {
+                        uniWord1+=bothStr[j]
+                    }
+                    else{
+                        if(uniWord == uniWord1)
+                        {
+                            count++  
+                        }
+                        uniWord1=""
+                    }
+                }
+           if(count==1)
+           {
+            console.log(uniWord)
+           } 
+            uniWord="" 
+                                   
+            }
+        }
+        
+    </script>
+</body>
+</html>

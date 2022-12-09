@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num =+prompt("ENTER") ; 
+
+        let value=2
+
+        function Prime( num , i)
+        {
+            if( num <= 2) return ( num == 2) ? true : false 
+
+            if( num % i == 0 ) return false 
+
+            if( i >= Math.trunc( num /2 )) return true
+
+
+            return  Prime( num , i + 1)
+        }
+
+        if( Prime( num , value)) console.log( "IT IS A PRIME NUMBER")
+
+        else console.log("IT IS NOT A PRIME NUMBER")
+    </script>
+</body>
+</html>

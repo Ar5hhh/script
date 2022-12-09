@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[30 , 40 ,13 , 60 , 54 , 15, 20 , 4 ,55]
+
+        // let numOfvalues = + prompt("ENTER")
+
+        // let arr=[]
+
+        // for( let i = 0 ; i < numOfvalues ; i ++ )
+        // {
+        //     arr[i] = +prompt("ENTER VALUE " + (i+1))
+        // }
+
+        function max (  arr )
+       {
+        if( arr.length == 1 ) return arr[0]
+        
+        return Math.max(arr.shift() , max(arr))
+
+
+       }
+
+        console.log( max(arr) )
+    </script>
+    
+</body>
+</html>

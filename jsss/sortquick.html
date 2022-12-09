@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    let items = [ 9 , 1 , 2 , 3 , 8 , 4 , 1 , 10 , 9 , 5 , 6 ]
+
+        function QuickSort(Arr)
+        {
+            if(Arr.length <= 1) return Arr;
+            
+            let pivot = Arr[Arr.length - 1];
+
+            let leftArr = [];
+            let rightArr = [];
+
+            for(let i=0; i < Arr.length-1;i++){
+
+                Arr[i] < pivot ? leftArr.push(Arr[i]) :  rightArr.push(Arr[i])
+
+            }
+            return [...QuickSort(leftArr) , pivot ,...QuickSort(rightArr)];
+        }
+        
+        console.log(QuickSort(items));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt( " enter ")
+        let c="abcdefghijklmnopqrstuvwxyz"
+        let flag;
+
+        for( let i = 0 ; i < str.length ; i ++ )
+        {
+            flag = false;
+            for( let j = 0 ; j < c.length ; j ++ )
+            {
+                if( str[i] == c[j])
+                {
+                    flag=true
+                    break
+                }
+                
+            }
+
+        }
+    </script>
+</body>
+</html>

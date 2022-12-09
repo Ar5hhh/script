@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sen = prompt("ENTER")
+        let word = prompt("ENTER")
+        let flag=false
+
+        let senNew = (sen.split(" "))
+
+
+        for( let i = 0 ; i < senNew.length ; i ++ )
+        {
+            if(senNew[i] == word )
+            {
+                flag=true
+                break;
+            } 
+        }
+        if(flag) console.log("ITS IN THE SENTENCE")
+        else console.log("ITS NOT IN THE SENTENCE")
+    </script>
+</body>
+</html>

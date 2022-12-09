@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let string="hello at world program intro over less on"
+
+        let string=prompt("ENTER")
+
+        let str=string.toLowerCase()
+
+        let word=""
+
+
+        for(let i = 0 ; i < str.length ; i ++ )
+        {
+            if(str[i] != " ")
+            {
+                word+=str[i]
+            }
+            else
+            {
+                if(word[0]=="a"|| word[0]=="e"|| word[0]=="i"|| word[0]=="o"|| word[0]=="u")
+                {
+                   console.log(word)
+                }
+
+                word=""
+                continue;
+            }
+
+            if(i == str.length-1)
+            {
+                if(word[0]=="a"|| word[0]=="e"|| word[0]=="i"|| word[0]=="o"|| word[0]=="u")
+                {
+                    console.log(word)
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

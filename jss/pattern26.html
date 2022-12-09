@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number =+prompt("Enter Pattern Size");
+        let pattern="";
+        for(let row = 1 ; row < 2 * number ; row++) {
+            let colCondition = (row <= number ) ? number + row - 1 : 3 * number - row - 1;
+
+            for(let col = 1; col <= colCondition ; col++) {
+                let spaceCond = (row <= number) ? col <= number - row : col <= row - number;
+                
+                pattern += (spaceCond) ? "  " : " *";
+            }
+            pattern += '\n';
+        }
+        console.log(pattern);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=+prompt("enter")
+        let pattern="";
+
+        for( let row=1 ; row <=num ; row++)
+        {
+            for( let col=1 ; col<=num+row-1 ; col ++)
+            {
+              pattern+=( row==num || col >=(num+row)-1 || col ==(num-row)+1) ? " *" : "  "
+            }
+            pattern+="\n"
+        }
+        console.log(pattern)
+    </script>
+</body>
+</html>

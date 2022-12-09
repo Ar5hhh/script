@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = [ 1 , 2 , 3 , 4 , 5 ]
+
+        let index = 0
+
+        let sum = 0
+
+        function Prime ( num , div=2)
+        {
+
+            if( num <= 2 ) return ( num == 2 ) ? true : false 
+            
+            if( num % div == 0 ) return false 
+
+            if( div > Math.trunc( num/2 )) return true
+
+            return Prime( num , div+1)
+
+        }
+
+        function Sum( arr , index )
+        {
+           
+            if( index == arr.length  ) return sum   
+
+            if( Prime( arr[index]))
+            {
+                return  sum += arr[ index ] + Sum ( arr , index + 1)
+            }
+            else
+            {
+                return Sum ( arr , index + 1 )
+            } 
+
+              
+        }
+
+        console.log( Sum ( arr , index ) )
+
+    </script> 
+</body>
+</html>
