@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let num=+prompt("ENTER NUMBER");
+
+        let temp1=num;
+        let temp2=num
+        let sum=0;  
+        let length=0;    
+        while(temp1>0)
+        {
+            temp1=Math.trunc(temp1/10);
+            length++;
+        }
+        // console.log(length)
+        while(temp2>0)
+        {    
+            let rem=temp2%10;
+            sum+=Math.pow(rem,length);
+            temp2=Math.trunc(temp2/10);
+
+
+        }
+        if(num==sum) console.log("AMSTRONG")
+        else console.log("NOT AN AMSTRONG")
+
+    </script>
+</body>
+</html>

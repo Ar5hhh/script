@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // FUNCTION METHODS 
+
+        // => CALL  -  function name . call ( object name , 10 , 20 )
+        // => APPLy  -  function name . apply ( object name , [10 , 20] )
+        // => BIND  -  function name . bind ( object name , 10 , 20 )
+        //             function name . bind ( object name , [10 , 20] )
+
+
+        let person = {
+            name : "laila",
+            age : 20,
+            address : "Jspider",
+        }
+
+        let voteElig = 18 ;
+        let standforElection = 21 ;
+
+        getname.apply(person , [voteElig , standforElection] )
+
+        function getname( a , b )
+        {
+            console.log( person.name )
+
+            if( person.age >=b) console.log("can vote and can stand for election")
+            
+            else if( person.age >=a) console.log(" can vote but cant stand for election")
+
+            else console.log(" cant vote and and cant stand for election")
+           
+            console.log( this ) 
+        }
+
+
+    </script>
+</body>
+</html>

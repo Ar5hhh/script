@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=+prompt("ENTER NUMBER");
+        temp=num;
+        let rev=0;
+        let sum=0;
+        while(temp>0)
+        {
+            let rem=temp%10;
+            rev=rev*10+ rem;
+            if(temp>100) sum+=rem;
+            temp=Math.trunc(temp/10);
+        }
+        console.log(rev);
+        console.log(sum);
+    </script>
+</body>
+</html>

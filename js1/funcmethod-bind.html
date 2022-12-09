@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // FUNCTION METHODS 
+
+        // => CALL  -  function name . call ( object name , 10 , 20 )
+        // => APPLy  -  function name . apply ( object name , [10 , 20] )
+        // => BIND  -  function name . bind ( object name , 10 , 20 )
+        //             function name . bind ( object name , [10 , 20] )
+
+
+        let person = {
+            name : "laila",
+            age : 20,
+            address : "Jspider",
+        }
+
+        let a = 10 ;
+        let b = 20;
+
+
+        let result = getname.bind(person , a , [ b ])
+
+        function getname( a , b )
+        {
+            console.log( person.name ) 
+            console.log( a + b)          
+            console.log( this ) 
+        }
+
+        console.log(result)
+
+        result()
+
+    </script>
+</body>
+</html>

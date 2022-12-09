@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [ 3, 2 , 2 , 5 ,7 , 14 ,12 ,2 ,17 , 5 ,10 , 18, 12]
+
+        let newArr=[]
+
+       let count
+
+        for( let i = 0 ; i < arr.length ; i ++ )
+        { 
+            count=0
+             
+            for( let j = 0 ; j < arr.length ; j ++ )
+            {
+                if( arr[i] == arr[j] ) count ++
+            } 
+            
+            if(count==1) newArr.push(arr[i])
+               
+        }
+
+        console.log(newArr)
+    </script>
+</body>
+</html>

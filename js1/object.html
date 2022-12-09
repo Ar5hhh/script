@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marker = {
+            price:20,
+            color:"black",
+            company:"camlin",
+            shape:"round"
+        }
+
+        console.log( marker)
+        console.log( marker.company)
+
+        console.log( marker["shape"])
+
+        // let a= prompt( "enter object property");
+        // console.log( marker.a) // undefined
+
+        // console.log( marker[a]) // 
+
+        let q=`co`
+        let w=`lor`
+
+        console.log( marker[`${q}${w}`])
+
+        //add new property to an object 
+
+        marker.length = "20cm"
+
+        console.log( marker)
+
+        //update property to an object 
+
+
+        marker.length = "25cm" 
+        console.log( marker)
+
+         //delete property to an object 
+
+        delete marker.shape
+        console.log( marker)
+
+
+
+    </script>
+</body>
+</html>

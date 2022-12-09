@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let start=+prompt("ENTER START LIMIT");
+let end=+prompt("ENTER END LIMIT");
+for(let i=start ; i<=end ; i++)
+{
+
+        let temp=i;
+        let temp2=i;
+        let sum=0;   
+        let length=0;    
+        while(temp>0)
+        {
+            temp=Math.trunc(temp/10);
+            length++;
+        }
+        // console.log(length)
+        while(temp2>0)
+        {    
+            let rem=temp2%10;
+            // sum+=Math.pow(rem,length);
+            sum+= rem ** length;
+            temp2=Math.trunc(temp2/10);
+
+
+        }
+        if(i==sum) console.log(i);
+
+
+    }
+
+    </script>
+</body>
+</html>

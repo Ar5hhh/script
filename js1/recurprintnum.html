@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function num ( n , end)
+        {
+            if( n > Math.trunc(end/2)) return
+            console.log( n )
+            num( n + 1 , end )
+            console.log( end - n +1)
+
+        }
+        let end = +prompt("ENTER")
+        num( 1 , end)
+    </script>
+</body>
+</html>

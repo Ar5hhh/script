@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let AC={
+            temp:30,
+            cool:27,
+            ACname: "LG",
+            ACprice: 10000,
+            decreasetemp:function(){
+                 this.temp=this.temp -1
+            },
+            increasecool:function(){
+                this.cool=this.cool +1
+            }
+        }
+
+
+        console.log(AC)
+
+        AC.decreasetemp();
+        AC.decreasetemp();
+        AC.increasecool();
+        AC.increasecool();
+        AC.decreasetemp();
+        console.log(AC)
+
+    </script>
+</body>
+</html>

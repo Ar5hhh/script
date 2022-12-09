@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[100 , 90 , 40 ,13 , 54 , 15, 20 , 4 ,75, 120]
+
+
+        let fmax=arr[0]
+
+        let smax=arr[1]
+
+        let tmax=arr[2]
+    
+        for( let i = 3 ; i < arr.length ; i ++ )
+        {
+            if(arr[i] > fmax) 
+            {  
+                tmax=smax
+                smax=fmax
+                fmax = arr[i]   
+                continue  
+            }
+            
+            if( arr[i] > tmax )
+            {
+                if( arr[i] > smax)
+                {
+                    tmax=smax;
+                    smax=arr[i]
+                    continue
+                }
+                tmax=arr[i]
+
+                
+            }
+                   
+        }
+
+        console.log(fmax)
+        console.log(smax)
+        console.log(tmax)
+  
+
+    </script>
+</body>
+</html>  

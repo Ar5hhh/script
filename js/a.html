@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=5;
+        let pattern="";
+
+
+        for( let row=1; row<=num ; row++)
+            {
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row<=Math.ceil(num/2) && col==1 || row<=Math.ceil(num/2) && col==num || col==row-Math.ceil(num/2)+1 || col==num-(row-Math.ceil(num/2))) ?  " *" :"  ";        
+
+                }
+                pattern+="\n"
+            }
+            console.log(pattern)
+    </script>
+</body>
+</html>

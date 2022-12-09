@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person ={
+            name : "denji",
+            id : "001",
+            address : "Jspiders",
+            age : 20
+        }
+
+        let { id , address } = person
+        
+        console.log( id , address )
+
+        // if the property is not available , we can set a default value
+
+
+        let { name=" name => not available" , gender=" gender => not available" } = person 
+
+        console.log( name , gender)
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let char=prompt("ENTER IN CAPS")
+
+        let num=+prompt("start with 5")
+
+        let result="";
+
+        if(num%2==0) num-=1;
+
+        if(num<5) num=5;
+
+        let symbol=prompt("ENTER ANY SPECIAL CHARACTER")
+
+
+        function a(char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=( row==1 && col>1 && col<num || col==1 && row >1 || col==num && row>1 ||row==Math.ceil(num/2) ) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function b(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col<num ||col==num && row >1 && row<num  && row != Math.ceil(num/2) ||col==1 ||row ==Math.ceil(num/2) && col<num||row==num && col<num) ?  " "+symbol :"  ";
+
+                }
+           
+
+            return pattern
+        }
+
+        function c(char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col>1 || row==num && col>1 || col==1 && row>1 && row<num) ?  " "+symbol :"  ";
+
+                }
+           
+
+            return pattern
+        }
+        function d(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col<num  || row==num  && col<num || col==num && row>1 && row<num|| col==1 ) ?  " "+symbol :"  ";
+
+                }
+              
+
+            return pattern
+        }
+
+        function e(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || row==Math.ceil(num/2) ||row==num || col==1) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function f(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || row==Math.ceil(num/2)|| col==1) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function g(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || row==num ||col==1 || col==num && row>=Math.ceil(num/2)|| row==Math.ceil(num/2) && col>=Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+           
+
+            return pattern
+        }
+
+        function h (char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(col==1 || col==num ||row===Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+             
+
+            return pattern
+        }
+
+        function i(char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || row==num ||col===Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function j(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1||col===Math.ceil(num/2)|| row==num && col<=Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+           
+
+            return pattern
+        }
+
+        function k(char,num,symbol,row)
+        {
+            pattern="";
+
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(col==1 ||row<=Math.ceil(num/2) && col==num-row || row>=Math.ceil(num/2) && col==row) ?  " "+symbol :"  ";
+
+                }
+            
+            return pattern
+        }
+
+        function l(char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==num || col==1 ) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+       
+
+        function m(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(col==1 || col==num || row==col && row<=Math.ceil(num/2) || row<=Math.ceil(num/2) && col==(num-row)+1) ?  " "+symbol :"  ";
+
+                }
+           
+
+            return pattern
+        }
+
+        function n(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(col==1 || col==num || col==row) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function o(char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col>1 && col<num || row==num && col >1 && col <num || col==1 && row>1 && col==1 && row<num || col==num  && row>1 && col==num && row<num ) ?  " "+symbol :"  ";
+
+                }
+             
+
+            return pattern
+        }
+
+        function p(char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col<num || col==num && row>1 && row<Math.ceil(num/2) || col==1|| row==Math.ceil(num/2) && col<num ) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function q(char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col>1 && col<num || row==num && col >1 && col <num || col==1 && row>1 && col==1 && row<num || col==num  && row>1 && col==num && row<num || row==col && row>=Math.ceil(num/2) && col<num ) ?  " "+symbol :"  ";
+
+                }
+            
+            return pattern
+        }
+
+        function r (char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 && col<num || col==num && row>1 && row<Math.ceil(num/2) || col==1|| row==Math.ceil(num/2) && col<num || row==col && row>=Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function s (char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || row==Math.ceil(num/2) || row==num || col==1 && row>1 && row<Math.ceil(num/2) || col==num && row<num && row>Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function t (char,num,symbol,row)
+        {
+            pattern="";
+
+           
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || col==Math.ceil(num/2)) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function u (char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==num && col>1 && col<num  || col==1 && row<num  ||  col==num && row<num) ?  " "+symbol :"  ";
+
+                }
+            
+
+            return pattern
+        }
+
+        function v (char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row<=Math.ceil(num/2) && col==1 || row<=Math.ceil(num/2) && col==num || col==row-Math.ceil(num/2)+1 || col==num-(row-Math.ceil(num/2))) ?  " "+symbol :"  ";
+
+                }
+           
+
+            return pattern
+        }
+
+        function w (char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(col==1 || col==num || row==col && row>=Math.ceil(num/2) || row>=Math.ceil(num/2) && col==(num-row)+1) ?  " "+symbol :"  ";
+
+                }
+             
+
+            return pattern
+        }
+
+        function x (char,num,symbol,row)
+        {
+            pattern="";
+
+            
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==col || col==(num-row)+1) ?  " "+symbol :"  ";
+
+                }
+                return pattern
+            }
+
+          
+
+        function y (char,num,symbol,row)
+        {
+            pattern="";
+
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==col && row<=Math.ceil(num/2) || col==(num-row)+1) ?  " "+symbol :"  ";
+
+                }
+
+            return pattern
+        }
+
+        function z (char,num,symbol,row)
+        {
+            pattern="";
+                for( let col=1 ; col<=num ; col++)
+                {
+                    pattern+=(row==1 || row==num || col==(num-row)+1) ?  " "+symbol :"  ";
+
+                }
+            return pattern
+        }
+        for(let row = 1; row <= num ; row++) {
+            for( let ch=0 ; ch<char.length ; ch++)
+        {
+        switch(char[ch])
+        {
+            case "A":
+                result+= a ( char,num,symbol,row)
+                break;
+
+            case "B":
+                result+= b ( char,num,symbol,row)
+                break;
+
+            case "C":
+                result+= c ( char,num,symbol,row)
+                break;
+
+            case "D":
+                result+= d ( char,num,symbol,row)
+                break;  
+
+            case "E":
+                result+= e ( char,num,symbol,row)
+                break; 
+
+            case "F":
+                result+= f ( char,num,symbol,row)
+                break; 
+
+            case "G":
+                result+= g ( char,num,symbol,row)
+                break; 
+
+            case "H":
+                result+= h ( char,num,symbol,row)
+                break; 
+
+            case "I":
+                result+= i ( char,num,symbol,row)
+                break; 
+                
+            case "J":
+                result+= j ( char,num,symbol,row)
+                break; 
+            case "K":
+                result+= k ( char,num,symbol,row)
+                break; 
+            case "L":
+                result+= l ( char,num,symbol,row)
+                break; 
+            case "M":
+                result+= m ( char,num,symbol,row)
+                break;  
+                
+            case "N":
+                result+= n ( char,num,symbol,row)
+                break; 
+
+            case "O":
+                result+= o ( char,num,symbol,row)
+                break; 
+
+            case "P":
+                result+= p ( char,num,symbol,row)
+                break; 
+
+            case "Q":
+                result+= q ( char,num,symbol,row)
+                break; 
+
+            case "R":
+                result+= r ( char,num,symbol,row)
+                break;
+
+            case "S":
+                result+= s ( char,num,symbol,row)
+                break;
+
+            case "T":
+                result+= t ( char,num,symbol,row)
+                break;
+
+            case "U":
+                result+= u ( char,num,symbol,row)
+                break;
+
+            case "V":
+                result+= v ( char,num,symbol,row)
+                break;
+
+            case "W":
+                result+= w ( char,num,symbol,row)
+                break;
+
+            case "X":
+                result+= x ( char,num,symbol,row)
+                break;
+
+            case "Y":
+                result+= y ( char,num,symbol,row)
+                break;
+
+            case "Z":
+                result += z ( char,num,symbol,row);
+                break;
+
+            case " ":
+                    console.log("\n \n")
+                    break;
+
+                default:
+                    console.log("ONLY ALPHABETS")
+       
+        }
+        result += "  "
+    }
+
+        result += '\n'
+        }
+
+        console.log(result)
+
+        
+    </script>
+</body>
+</html>

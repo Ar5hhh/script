@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=+prompt("ENTER NUMBER") 
+        rev="";
+
+        while( num > 0 )
+        {
+            let result="";
+            let rem = num%16;
+
+            switch(rem)
+            {
+                case 10:  
+                result+= "A" 
+                break;
+
+                case 11:  
+                result+= "B"  
+                break;
+
+                case 12:  
+                result+= "C"  
+                break;
+ 
+                case 13:  
+                result+= "D" 
+                break;
+
+                case 14: 
+                result+= "E"  
+                 break;
+
+                case 15:  
+                result+= "F"  
+                break;
+
+                default: 
+                 result+=rem 
+
+            }
+            rev=result+rev;
+
+
+            num=Math.trunc(num/16);
+
+  
+        } 
+        console.log(rev)
+    </script>
+    
+</body>
+</html>

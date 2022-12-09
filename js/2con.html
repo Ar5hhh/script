@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=+prompt("ENTER NUMBER");
+        let flag=false
+
+        for( let i=2 ; i + 1 <= Math.trunc(num/2) ; i++)
+        {
+            if(num%i==0)
+            {
+               let j=i+1;
+               if(num%j==0)
+               {
+                console.log(i , j)
+                flag=true;
+                break;
+               }
+               
+            }
+         
+        }
+        if(flag==true) console.log("CONSECUTIVE FACTORS")
+        else console.log("NO CONSECUTIVE FACTORS")
+
+
+    </script>
+</body>
+</html>

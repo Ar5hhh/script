@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let promise1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                return resolve(1)
+            }, 3000)
+        })
+        let promise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                return reject(2)
+            }, 1000)
+        })
+        let promise3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                return resolve(3)
+            }, 3000)
+        })
+
+        let result = Promise.race([promise1, promise2, promise3])
+
+
+        console.log(result)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let start=+prompt("ENTER START LIMIT")
+        let end=+prompt("ENTER END LIMIT")
+        
+        let pow=0;
+
+
+        for(let i=start ; i<=end ; i++)
+        {
+            let temp=i;
+            let count=0;
+            let result=0;
+
+            while(temp>0)
+            {
+                let rem=temp%2;
+
+                if(rem) count++;
+
+                result+=rem*10 **pow;
+                temp=Math.trunc(temp/2);
+                pow++
+
+            }
+            if(count%2==0) console.log(i+" --" +result);
+        }
+    </script>
+</body>
+</html>

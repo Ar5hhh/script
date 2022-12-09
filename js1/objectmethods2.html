@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let password = Symbol()
+
+        let student = {
+            name : "siri",
+            contact : 9876543210,
+            address : "Apple",
+            [password] : "qwerty"
+        }
+       
+        // Object.freeze
+        
+        // Object.freeze(student)
+
+        // console.log(Object.isFrozen(student))
+
+        // student.age = 20 
+
+        // student.address = "meta"
+
+        // delete student.contact
+
+        // console.log( student)
+
+
+        //Object.seal 
+
+        Object.seal(student)
+
+        console.log(Object.isSealed(student))
+
+        student.age = 20 
+
+        student.address = "meta"
+
+        delete student.contact
+
+        console.log( student)
+    </script>
+</body>
+</html>

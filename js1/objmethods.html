@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name : "alexa",
+            id : "001",
+            address : "Amazon"
+        }
+
+        let student = {
+            name : "siri",
+            contact : 9876543210,
+            address : "Apple"
+        }
+
+        // Object.assign - used to merge two objects , if both has same property: it will update or override it  
+        let result = Object.assign(person , student)
+        console.log(result)
+
+        // Object.values - need only one obj to pass = it will return all the values inside the object in an array
+        let result1 = Object.values(person)
+        console.log( result1)
+        // console.log(Array.isArray(result))
+
+        //Object.keys - used to get all the keys in an array
+        let result2 = Object.keys(student)
+        console.log(result2)
+    </script>
+</body>
+</html>

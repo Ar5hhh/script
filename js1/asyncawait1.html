@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function datafetch()
+        { let url = "https://jsonplaceholder.typicode.com/users"
+
+        // let result =  fetch(url) // error
+
+            let result = await fetch(url)
+            let finalresult = result.json()
+
+           console.log(finalresult)
+        }
+
+        async function datafetchh()
+        { let age
+
+        // let result =  fetch(url) // error
+
+            let result = await fetch(url)
+            let finalresult = result.json()
+
+           console.log(finalresult)
+        }
+
+        function add ( a , b )
+        {
+           console.log( a + b ) 
+        }
+        function addd ( a , b )
+        {
+           console.log( a + b ) 
+        }
+        datafetch()
+
+         add( 10 , 5)
+
+         datafetchh()
+
+         addd( 10 , 10)
+
+
+    //    function datafetch(a , b )
+    //    {
+    //     return a +b
+           
+    //     }
+
+    //     function add ( a , b )
+    //     {
+    //         return a + b 
+    //     }
+        
+    //     console.log(datafetch(1, 2))
+
+    //     console.log( add( 10 , 5))
+    </script>
+</body>
+</html>
